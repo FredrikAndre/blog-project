@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="modal-box">
+        <h1 class="title">
+            Create a new Blog
+        </h1>
+        
+        <form #newBlog="ngForm" (ngSubmit)="createBlog()">
+            <div class="mb-2">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" [(ngModel)]="title" class="form-control" name="title" required minlength="2" #newTitle="ngModel" >
+                <small class="form-text text-muted" *ngIf="newTitle.touched && !newTitle.valid">Please enter a title, atleast 2 characters long.</small>
+            </div>
+            <button type="submit" class="btn btn-primary addbtn"  [disabled]="!newBlog.valid">Create Blog</button>
+            <button type="button" class="btn btn-dark cancelbtn" (click)="cancel()">Cancel</button>
+        </form> 
+
+    </div>
+</div>

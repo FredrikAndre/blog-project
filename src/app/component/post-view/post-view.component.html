@@ -1,0 +1,15 @@
+    <div class="blog-post">
+        <div class="blog-post-text">
+            <div class="post-header">
+                <h5 class="post-title">{{ post.title}}</h5>
+                <h6 class="post-date">Posted: {{ post.created | date: 'dd/M/y' }}</h6>
+            </div>
+            <div class="post-content-body">
+                <p class="post-content">{{ post.content }}</p>
+                <div class="fade-out-text"></div>
+            </div>
+        </div>
+        <a class="read-more" routerLink="./posts/{{ post.id }}">Read More...</a>
+    </div>        
+
+

@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+    .modal-box {
+        min-height: 13rem;
+        width: 100%;
+        max-width: 40rem;
+        background-color: #FCFBF9;
+        padding: 2rem;
+
+        .title {
+            color: #000033;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: bold;
+            letter-spacing: 0.05ch;
+        }
+
+        .titlediv {
+            margin-bottom: 1rem;
+        }
+
+        .contentdiv {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 1rem;
+        }
+        .cancelbtn {
+            margin-left: 1rem;
+        }
+    }
+}
+
+input.ng-touched.ng-invalid {
+    border: 1px solid #DC143C;
+    background-color: #F9D7DE;
+}
+
+textarea.ng-touched.ng-invalid {
+    border: 1px solid #DC143C;
+    background-color: #F9D7DE;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="modal-box">
+        <h1 class="title">
+            Update your post
+        </h1>
+        
+        <form #updatePosts="ngForm" (ngSubmit)="updatePost()"  *ngIf="post">
+            <div class="titlediv">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" [(ngModel)]="post.title" class="form-control" name="title" required minlength="2" #updatedPost="ngModel" >
+                <small class="form-text text-muted" *ngIf="updatedPost.touched && !updatedPost.valid">Please enter a new title, atleast 2 characters long.</small>
+            </div>
+            <div class="contentdiv">
+                <label for="content" class="form-label">Content</label>
+                <textarea class="form-control" [(ngModel)]="post.content" name="content" rows="4" required minlength="10" #updateContent="ngModel"></textarea>
+                <small class="form-text text-muted" *ngIf="updateContent.touched && !updateContent.valid">Please enter post-content, atleast 10 characters long.</small>
+            </div>
+            <button type="submit" class="btn btn-primary addbtn" [disabled]="!updatePosts.valid">Save & Update</button>
+            <button type="button" class="btn btn-dark cancelbtn" (click)="cancel()" >Cancel</button>
+        </form> 
+
+    </div>
+</div>
