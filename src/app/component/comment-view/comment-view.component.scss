@@ -2,11 +2,14 @@
 .comment-content {
     margin: auto;
     width: 100%;
-    background-color: #000033;
+    background-color: #fff;
+    border: 1px solid #8E8D8A;
+    margin-bottom: 0.5rem;
+
     
     .comment {
-        color: #fff;
-        margin-bottom: 0.5rem;
+        color: #333333;
+        margin-bottom: 0;
         padding: 1rem;
     }
 }

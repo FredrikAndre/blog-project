@@ -16,7 +16,6 @@ export class NewBlogComponent implements OnInit {
   public blogs: Blog[] = [];
   blog: Blog;
   title: string;
-  created: Date;
   id: number;
 
   constructor(private blogsService: BlogService, private router: Router) { }
@@ -26,7 +25,7 @@ export class NewBlogComponent implements OnInit {
   }
 
   createBlog() {
-    let newBlog = new Blog(this.title, this.created)
+    let newBlog = new Blog(this.title, new Date())
     this.blogsService.createBlog(newBlog).subscribe((blog) => {
       this.blogs.push((blog))
       this.router.navigate(['/blogs/', blog.id])

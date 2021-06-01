@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 
     .post-manager-container {
-        background-color: #EEE7DF;
+        background-color: #EAE7DC;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -19,7 +19,6 @@
         .post-header {
             display: flex;
             justify-content: space-between;
-            background-color: #FCFBF9;
             padding: 1rem;
             margin-bottom: 1rem;
             
@@ -28,15 +27,16 @@
                 align-items: flex-end;
 
                 .title {
-                    color: #000033;
+                    color: #E85A4F;
                     font-family: 'Bebas Neue', cursive;
                     font-weight: bold;
                     letter-spacing: 0.05ch;
                     margin: auto;
+                    border-bottom: 1px solid #E85A4F;
                 }
                 
                 .created {
-                    color: #000033;
+                    color: #333333;
                     margin-left: 2rem;
                 }       
             }
@@ -45,7 +45,7 @@
                 margin-top: 0.5rem;
                 display: flex;
                 text-decoration: none;
-                color: #000033;
+                color: #333333;
                 cursor: pointer;
 
                 &:hover {
@@ -55,10 +55,12 @@
                 .fa-chevron-left {
                     font-size: 1.5rem;
                     margin-right: 0.5rem;
+                    color: #E98074
                 }
                 .arrowback {
                     margin: auto;
                     margin-left: 0;
+                    
                 }
             }
 
@@ -68,7 +70,7 @@
                 
 
                 .fa-edit {
-                    color: #ED6B12;
+                    color: #E98074;
                     cursor: pointer;
                     font-size: 2rem;
                     margin: auto;
@@ -104,7 +106,7 @@
         }
         
         .post-content {
-            background-color: #FCFBF9;
+            background-color: #fff;
             padding: 1rem;
             margin-bottom: 1rem;
             flex-grow: 1;
@@ -113,7 +115,7 @@
         }
 
         .comment-section {
-            background-color: #FCFBF9;
+            background-color: #fff;
             padding: 1rem;
             width: 100%;
             flex-grow: 2;
@@ -127,7 +129,7 @@
                 margin-bottom: 1rem;
             
                 .comment-title {
-                    color: #000033;
+                    color: #333333;
                     font-weight: 700;
                     margin-bottom: 1rem;
                 }
@@ -167,6 +169,11 @@
             }            
         }
     }
+}
+
+.modal-content {
+    background-color: #EAE7DC;
+    color: #333333;
 }
 
 textarea.ng-touched.ng-invalid {

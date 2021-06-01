@@ -11,7 +11,7 @@
                 <small class="form-text text-muted" *ngIf="updateTitle.touched && !updateTitle.valid">Please enter a new title, atleast 2 characters long.</small>
             </div>
             <button type="submit" class="btn btn-primary addbtn"  [disabled]="!updateBlog.valid">Save & Update</button>
-            <button type="button" class="btn btn-dark cancelbtn" (click)="cancel()">Cancel</button>
+            <button type="button" class="btn btn-outline-dark cancelbtn" (click)="cancel()">Cancel</button>
         </form> 
 
     </div>

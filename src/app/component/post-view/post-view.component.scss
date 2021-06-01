@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #FCFBF9;
+    background-color: #fff;
     padding: 1rem 1.2rem;
     margin-top: 0.6rem;
     height: 10.5rem;
@@ -20,15 +20,13 @@
             justify-content: space-between;
             
             .post-title {
-                color: #000033;
-                font-family: 'Montserrat', cursive;
+                color: #333333;
                 font-weight: bold;
                 letter-spacing: 0.05ch;
             }
 
             .post-date {
-                color: #000033;
-                font-family: 'Montserrat', cursive;
+                color: #333333;
                 font-weight: bold;
                 letter-spacing: 0.05ch;
             }
@@ -40,7 +38,7 @@
             overflow-y: hidden;
     
             .post-content {
-                color: #2E2E2E;   
+                color: #333333;   
             }
 
             .fade-out-text {
@@ -58,7 +56,7 @@
     .read-more {
         text-decoration: none;
         cursor: pointer;
-        color: #FB998E;
+        color: #E85A4F;
         font-size: 1.1rem;
         transition: font-size 0.3s ease;
 

@@ -16,7 +16,6 @@ export class NewPostComponent implements OnInit {
 
   title: string;
   content: string;
-  created: Date;
   blogId: number;
   id: number = 0;
 
@@ -30,7 +29,7 @@ export class NewPostComponent implements OnInit {
     let newPost = new Post(
       this.title, 
       this.content,
-      this.created,
+      new Date(),
       this.blogId, 
       this.id
     )

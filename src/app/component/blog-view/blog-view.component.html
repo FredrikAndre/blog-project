@@ -5,7 +5,7 @@
                 <h1 class="title">
                     Blogs
                 </h1>
-                <button type="button" class="btn btn-primary btn-sm" routerLink="/new-blog">+ Add Blog</button>
+                <button type="button" class="btn btn-outline-dark btn-sm" routerLink="/new-blog">+ Add Blog</button>
             </div>
 
             <div class="blog-menu"  *ngFor="let b of blogs; let i = index" [blogId]="b.id" routerLinkActive="active">
@@ -15,26 +15,22 @@
                 <div class="changebuttons">
                     <i class="fas fa-edit" routerLink="/edit-blog/{{ b.id }}"></i>
                     <i class="fas fa-times" (click)="deleteBlog(b)"></i>
-                </div>    
-            </div>
-
-            
+                </div>
+            </div>   
         </div>
         
-
         <div class="blogs-list-container">
             <div class="blog-list-header">
                 <h1 class="title">
                     Blog Content
                 </h1>
-                <button type="button" class="btn btn-primary btn-sm" routerLink="./new-post">+ Add Post to Blog</button>
+                <button type="button" class="btn btn-outline-dark btn-sm" routerLink="./new-post">+ Add Post to Blog</button>
             </div>
 
-            <div class="blog-post-container">
-            <app-post-view *ngFor="let p of posts" [post]="p"></app-post-view>
+            <div class="blog-post-container" >
+            <app-post-view *ngFor="let p of posts" [post]="p" [@postEntry]></app-post-view>
             </div>
-            
-            
+               
         </div>
     </div>
 </div>

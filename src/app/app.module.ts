@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
 import { BlogViewComponent } from './component/blog-view/blog-view.component';
-
-import { HttpClientModule } from '@angular/common/http';
 import { NewBlogComponent } from './component/new-blog/new-blog.component';
 import { PostViewComponent } from './component/post-view/post-view.component';
 import { NewPostComponent } from './component/new-post/new-post.component';
@@ -30,7 +31,8 @@ import { EditPostComponent } from './component/edit-post/edit-post.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,7 @@
                 <small class="form-text text-muted" *ngIf="updateContent.touched && !updateContent.valid">Please enter post-content, atleast 10 characters long.</small>
             </div>
             <button type="submit" class="btn btn-primary addbtn" [disabled]="!updatePosts.valid">Save & Update</button>
-            <button type="button" class="btn btn-dark cancelbtn" (click)="cancel()" >Cancel</button>
+            <button type="button" class="btn btn-outline-dark cancelbtn" (click)="cancel()" >Cancel</button>
         </form> 
 
     </div>

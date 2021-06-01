@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { BlogService } from 'src/app/blog.service';
 import { Post } from 'src/app/models/Post';
 import { Blog } from '../../models/Blog';
@@ -7,7 +8,32 @@ import { Blog } from '../../models/Blog';
 @Component({
   selector: 'app-blog-view',
   templateUrl: './blog-view.component.html',
-  styleUrls: ['./blog-view.component.scss']
+  styleUrls: ['./blog-view.component.scss'],
+  animations: [
+    trigger('postEntry', [
+      transition('void => *', [
+        style({
+          height: 0,
+          opacity: 0,
+          transform: 'scale(0.85)',
+          'margin-bottom': 0,
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingRight: 0,
+          paddingLeft: 0,
+        }),
+        animate('50ms', style({
+          height: '*',
+          'margin-bottom': '*',
+          paddingTop: '*',
+          paddingBottom: '*',
+          paddingRight: '*',
+          paddingLeft: '*',
+        })),
+        animate(70)
+      ])
+    ])
+  ]
 })
 export class BlogViewComponent implements OnInit {
 

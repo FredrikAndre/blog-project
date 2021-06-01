@@ -33,7 +33,6 @@ export class EditPostComponent implements OnInit {
     })
   }
 
-
   updatePost() {
     let updatedPost = new Post(
       this.post.title, 
