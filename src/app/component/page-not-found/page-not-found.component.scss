@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+    .modal-box {
+        width: 100%;
+        max-width: 40rem;
+        background-color: #EAE7DC;
+        padding: 2rem;
+        text-align: center;
+
+        .title {
+            color: #E85A4F;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: bold;
+            letter-spacing: 0.05ch;
+            font-size: 1.6rem;
+            @media screen and (min-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        .warningtext {
+            color: #333333;
+            font-size: 0.8rem;
+            @media screen and (min-width: 768px) {
+                font-size: 1rem;
+            }
+
+        }
+    }
+}

@@ -14,6 +14,7 @@ import { SoloPostComponent } from './component/solo-post/solo-post.component';
 import { CommentViewComponent } from './component/comment-view/comment-view.component';
 import { EditBlogComponent } from './component/edit-blog/edit-blog.component';
 import { EditPostComponent } from './component/edit-post/edit-post.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EditPostComponent } from './component/edit-post/edit-post.component';
     CommentViewComponent,
     EditBlogComponent,
     EditPostComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

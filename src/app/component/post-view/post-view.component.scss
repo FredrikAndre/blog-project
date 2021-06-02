@@ -60,17 +60,28 @@
         
     }
 
-    .read-more {
-        text-decoration: none;
-        cursor: pointer;
-        color: #E85A4F;
-        font-size: 1.1rem;
-        transition: font-size 0.3s ease;
+    .post-content-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        &:hover {
-            font-size: 1.3rem;
+        .read-more {
+            text-decoration: none;
+            cursor: pointer;
+            color: #E85A4F;
+            font-size: 1.1rem;
+            transition: font-size 0.3s ease;
+    
+            &:hover {
+                font-size: 1.3rem;
+            }
+        }
+        .comments {
+            font-size: 0.8rem;
+            margin-bottom: 0;
         }
     }
+    
 
     
 }
