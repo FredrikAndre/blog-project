@@ -1,15 +1,29 @@
-import { TestBed } from '@angular/core/testing';
+import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { BlogViewComponent } from './component/blog-view/blog-view.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { routes } from './app-routing.module';
 
 describe('AppComponent', () => {
+
+  let location: Location;
+  let router: Router;
+  let fixture;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        HttpClientModule,
+        AppRoutingModule,
+        RouterTestingModule.withRoutes(routes)
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        BlogViewComponent,
       ],
     }).compileComponents();
   });
@@ -20,16 +34,22 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'blog-project'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('blog-project');
-  });
+  beforeEach(() => {
+    router = TestBed.inject(Router);
+    location = TestBed.inject(Location);
+    fixture = TestBed.createComponent(AppComponent);
+    router.initialNavigation();
+  })
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('blog-project app is running!');
-  // });
+  describe('routes', () => {
+    it('should navigate to /blogs', fakeAsync(() => {
+      router.navigate([""]);
+      tick();
+      expect(location.path()).toBe('/blogs')
+    }));
+  })
+    
+
+  
+
 });

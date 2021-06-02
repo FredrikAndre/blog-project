@@ -131,6 +131,13 @@
                 .title {
                     color: #E85A4F;
                     font-size: 3rem;
+                    @media screen and (max-width: 450px) {
+                        font-size: 2rem;
+                    }
+                    @media screen and (max-width: 376px) {
+                        font-size: 1.8rem;
+                        margin-right: 0.5rem;
+                    }
                     font-family: 'Bebas Neue', cursive;
                     font-weight: bold;
                     letter-spacing: 0.05ch;

@@ -17,7 +17,6 @@ export class PostViewComponent implements OnInit {
 
   public blogs: Blog[];
   public posts: Post[];
-
  
   constructor( private blogsService: BlogService, private route: ActivatedRoute, private router: Router ) { }
 
@@ -26,12 +25,3 @@ export class PostViewComponent implements OnInit {
   }
   
 }
-
-
-// getBlog() {
-  //   this.blogsService.getBlog(this.blogId)
-  //   .subscribe((blog) => {
-  //     this.blog = blog
-  //     console.log(blog)
-  //   });
-  // }

@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../../app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { NewPostComponent } from './new-post.component';
 
 describe('NewPostComponent', () => {
@@ -8,7 +10,12 @@ describe('NewPostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewPostComponent ]
+      declarations: [ NewPostComponent ],
+      imports: [ 
+        HttpClientModule,
+        AppRoutingModule,
+        FormsModule 
+      ]
     })
     .compileComponents();
   });
@@ -19,7 +26,7 @@ describe('NewPostComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

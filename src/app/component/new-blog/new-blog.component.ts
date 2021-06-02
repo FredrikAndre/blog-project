@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router, Params } from '@angular/router';
 import { BlogService } from 'src/app/blog.service';
 import { Blog } from 'src/app/models/Blog';

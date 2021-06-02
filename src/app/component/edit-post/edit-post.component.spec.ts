@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../../app-routing.module';
 import { EditPostComponent } from './edit-post.component';
 
 describe('EditPostComponent', () => {
@@ -8,7 +9,11 @@ describe('EditPostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditPostComponent ]
+      declarations: [ EditPostComponent ],
+      imports: [ 
+        HttpClientModule,
+        AppRoutingModule 
+      ]
     })
     .compileComponents();
   });
@@ -19,7 +24,7 @@ describe('EditPostComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

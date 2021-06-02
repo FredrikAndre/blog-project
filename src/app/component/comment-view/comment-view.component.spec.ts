@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../../app-routing.module';
 import { CommentViewComponent } from './comment-view.component';
 
 describe('CommentViewComponent', () => {
@@ -8,7 +9,11 @@ describe('CommentViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentViewComponent ]
+      declarations: [ CommentViewComponent ],
+      imports: [ 
+        HttpClientModule,
+        AppRoutingModule 
+      ]
     })
     .compileComponents();
   });

@@ -8,7 +8,7 @@ import { NewPostComponent } from './component/new-post/new-post.component';
 import { PostViewComponent } from './component/post-view/post-view.component';
 import { SoloPostComponent } from './component/solo-post/solo-post.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: "", redirectTo: 'blogs', pathMatch: 'full' },
   { path: "new-blog", component: NewBlogComponent},
   { path: "edit-blog/:id", component: EditBlogComponent, pathMatch: 'full'},

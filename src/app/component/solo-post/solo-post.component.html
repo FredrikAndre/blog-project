@@ -5,7 +5,6 @@
             <div class="post-title">
                 <h1 class="title">{{ post.title }}</h1>
                 <h6 class="created">Created: {{ post.created | date: 'dd/M/y' }}</h6>
-                <h6 *ngIf="post.created != post.modified"> edited: {{ post.modified }}</h6>
             </div>
                 <a class="post-title-menu" (click)="goBack()">
                     <i class="fas fa-chevron-left"></i>
