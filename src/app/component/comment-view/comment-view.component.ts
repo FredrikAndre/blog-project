@@ -13,9 +13,6 @@ export class CommentViewComponent implements OnInit {
   @Input() post: Post;
   @Input() comment: Comment;
 
-  public posts: Post[];
-  public comments: Comment[];
-
   constructor() { }
 
   ngOnInit(): void {
