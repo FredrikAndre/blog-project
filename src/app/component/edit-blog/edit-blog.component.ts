@@ -1,9 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { BlogService } from 'src/app/blog.service';
 import { Blog } from 'src/app/models/Blog';
-import { Post } from 'src/app/models/Post';
 
 @Component({
   selector: 'app-edit-blog',

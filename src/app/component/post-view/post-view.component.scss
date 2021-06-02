@@ -1,5 +1,4 @@
 
-
 .blog-post {
     display: flex;
     flex-direction: column;
@@ -23,12 +22,20 @@
                 color: #333333;
                 font-weight: bold;
                 letter-spacing: 0.05ch;
+                font-size: 0.9rem;
+                @media screen and (min-width: 576px) {
+                    font-size: 1rem;
+                }
             }
 
             .post-date {
                 color: #333333;
                 font-weight: bold;
                 letter-spacing: 0.05ch;
+                font-size: 0.8rem;
+                @media screen and (min-width: 576px) {
+                    font-size: 0.9rem;
+                }
             }
         }
 

@@ -5,7 +5,6 @@ import { EditBlogComponent } from './component/edit-blog/edit-blog.component';
 import { EditPostComponent } from './component/edit-post/edit-post.component';
 import { NewBlogComponent } from './component/new-blog/new-blog.component';
 import { NewPostComponent } from './component/new-post/new-post.component';
-import { PostViewComponent } from './component/post-view/post-view.component';
 import { SoloPostComponent } from './component/solo-post/solo-post.component';
 
 export const routes: Routes = [

@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { BlogService } from 'src/app/blog.service';
 import { Blog } from 'src/app/models/Blog';
 import { Post } from 'src/app/models/Post';
 
@@ -18,7 +16,7 @@ export class PostViewComponent implements OnInit {
   public blogs: Blog[];
   public posts: Post[];
  
-  constructor( private blogsService: BlogService, private route: ActivatedRoute, private router: Router ) { }
+  constructor() { }
 
   ngOnInit(): void {
    

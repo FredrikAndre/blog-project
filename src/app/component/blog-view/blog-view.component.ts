@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { BlogService } from 'src/app/blog.service';
 import { Post } from 'src/app/models/Post';
 import { Blog } from '../../models/Blog';

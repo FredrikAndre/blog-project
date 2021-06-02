@@ -10,8 +10,6 @@ import { Comment } from './models/Comment';
 })
 export class BlogService {
 
-  private blogs: Blog[] = []
-
   constructor(private _http:HttpClient) { }
 
   getBlogs(): Observable<Blog[]> {
@@ -37,8 +35,8 @@ export class BlogService {
     return this._http.delete<Blog>(url);
   }
 
+  
   // Posts!
-
   getBlogPosts(post: Post): Observable<Post[]> {
     return this._http.get<Post[]>('https://mi-blogs.azurewebsites.net/api/Posts');
   }
@@ -61,8 +59,7 @@ export class BlogService {
   }
 
   
-  // Comments
-
+  // Comments!
   getComments(): Observable<Comment[]> {
     return this._http.get<Comment[]>('https://mi-blogs.azurewebsites.net/api/Comments')
   }

@@ -1,8 +1,7 @@
 import { Location } from '@angular/common';
-import { Component, Input, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { BlogService } from 'src/app/blog.service';
-import { Blog } from 'src/app/models/Blog';
 import { Post } from '../../models/Post';
 import { Comment } from '../../models/Comment';
 
@@ -23,7 +22,7 @@ export class SoloPostComponent implements OnInit {
   postId: number;
   content: string = "";
 
-  constructor(private blogsService: BlogService, private router: Router , private route: ActivatedRoute, private locations: Location) { }
+  constructor(private blogsService: BlogService, private route: ActivatedRoute, private locations: Location) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
